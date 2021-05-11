@@ -26,19 +26,26 @@ let costBakery = 800;
 let costChain = 1600;
 
 
-
+//set interval of 1s to increment score by 1 and update the mathing DOM element.
 window.setInterval(function () {
     score += second;
     totalcookie.innerHTML = `${score} Cookies`;
 }, 1000);
 
+//for Each bonus.
 
 Mfingers.addEventListener('click', function () {
+    //if the score is bigger or equal the cost of the bonus.
     if (score >= costHands) {
+        //Subtract the total amount minus the cost of the bonus
         score = score - costHands;
+        //Increase the cookies per second.
         second += this.value;
+        //Increase the displayed number next to the bonusses.
         countHand = countHand += 1;
+        //calc the cost increase based on the amount already bought.
         costHands = Math.round(costHands + costHands/countHand*0.2);
+        //Display everything in the dom.
         this.childNodes[0].style.opacity = "1";
         this.childNodes[1].innerHTML = countHand;
         costPay[0].innerHTML=costHands;
@@ -51,7 +58,7 @@ Fchef.addEventListener('click', function () {
     if (score >= costChef) {
         score = score - costChef;
         countChef = countChef += 1;
-        costChef = Math.round(costChef + costChef/countHand*0.2);
+        costChef = Math.round(costChef + costChef/countChef*0.2);
         console.log(costChef);
         second += this.value;
         this.childNodes[0].style.opacity = "1";
@@ -65,7 +72,7 @@ Elfs.addEventListener('click', function () {
     if (score >= costElf) {
         score = score - costElf;
         countElf = countElf += 1;
-        costElf = Math.round(costElf + costElf/countHand*0.2);
+        costElf = Math.round(costElf + costElf/countElf*0.2);
         second += this.value;
         this.childNodes[0].style.opacity = "1";
         this.childNodes[1].innerHTML = countElf;
@@ -78,7 +85,7 @@ Bakery.addEventListener('click', function () {
     if (score >= costBakery) {
         score = score - costBakery;
         countBakery = countBakery += 1;
-        costBakery = Math.round(costBakery + costBakery/countHand*0.2);
+        costBakery = Math.round(costBakery + costBakery/countBakery*0.2);
         second += this.value;
         this.childNodes[0].style.opacity = "1";
         this.childNodes[1].innerHTML = countBakery;
@@ -91,7 +98,7 @@ Chain.addEventListener('click', function () {
     if (score >= costChain) {
         score = score - costChain;
         countChain = countChain += 1;
-        costChain = Math.round(costChain + costChain/countHand*0.2);
+        costChain = Math.round(costChain + costChain/countChain*0.2);
         second += this.value;
         this.childNodes[0].style.opacity = "1";
         this.childNodes[1].innerHTML = countChain;
