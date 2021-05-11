@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+$body-text:  #6a3810;
+body {
+
+  background-image: url("../img/cookiebg.jpg");
+  background-size: cover;
+  background-position: center center;
+  color:$body-text;
+}
+
+.title {
+  font-family: 'Cookie', cursive;
+  font-size:3.5rem;
+  color: #c64e1e;
+}
+
+
+.container.field {
+  padding:50px;
+  height: 100vh;
+  padding-top:120px;
+
+  .stats {
+
+    h1 {
+      font-size:5rem;
+      margin:0;
+      margin-top:-20px;
+    }
+
+    p {
+      font-family: 'Cookie', cursive;
+      font-size:2rem;
+      margin:0;
+      margin-top:-20px;
+      color: $body-text;
+    }
+
+  }
+  .cookie {
+    position: absolute;
+    width: 300px;
+    height:300px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+
+    &:hover {
+      width: 320px;
+      height:320px;
+      cursor: pointer;
+    }
+
+    &:active {
+      width: 370px;
+      height:370px;
+    }
+
+    .cookie-inner {
+      background-image: url("../img/cookie.png");
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+
+
+    }
+  }
+}
+
+.container.powerups {
+
+
+  .top-power  {
+    padding-top: 50px;
+    z-index: 1;
+
+    #description {
+
+      .title-small {
+        display: inline-block;
+        font-family: 'Cookie', cursive;
+        font-size: 1.5rem;
+        transform: translateY(5px);
+      }
+
+    }
+    ul#poweruplist {
+      padding-left:0px;
+      margin-bottom:50px;
+      margin-top: 40px;
+
+      li {
+        transform: translateX(18px);
+        padding:10px 0;
+        list-style-type: none;
+        display: inline-block;
+
+       .countbol {
+         color: #fff3d6;
+         padding-top: 3px;
+         position: relative;
+         display: inline-block;
+         left:-30px;
+         top:30px;
+         width: 30px;
+         height: 30px;
+         border-radius:15px;
+         background-color: #1c8d3d;
+         font-weight: bold;
+       }
+        img {
+          width: 60px;
+          opacity: 0.3;
+          transition: 0.3s;
+          cursor:pointer;
+
+          &:hover {
+           transform: translateY(-10px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    ul#description {
+      padding-left: 0px;
+      margin:0 auto;
+
+      li {
+        width: 100%;
+        margin:0 auto;
+        padding:10px 0;
+        list-style-type: none;
+        display: inline-block;
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+
+
+  }
+}
